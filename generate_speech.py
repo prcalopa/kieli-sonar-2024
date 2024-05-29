@@ -70,12 +70,6 @@ if __name__ == "__main__":
     csv_files = glob.glob(join(dirname(__file__), 'assets/combined-words/*.csv'))
     for file_path in csv_files:
         print(file_path)
-        # read_csv_file_and_generate_audio(file_path)
+        read_csv_file_and_generate_audio(file_path)
 
-
-
-
-# Read csv file and generate audio
-# file_path = join(dirname(__file__), 'assets/combined-words/culture-words.csv')
-# read_csv_file_and_generate_audio(file_path)
 
