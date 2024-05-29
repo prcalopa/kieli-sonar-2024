@@ -13,6 +13,9 @@ def read_csv_file_and_generate_audio(file_path):
     folder_name = os.path.splitext(os.path.basename(file_path))[0]
 
     output_folder = join(generated_assets_path, folder_name)
+    # Create the output folder if it does not exist
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
     # Load the CSV file into a DataFrame
     df = pd.read_csv(file_path, index_col=0)
