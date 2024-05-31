@@ -50,8 +50,8 @@ def generate_audio_from_text(text, voice, model):
 
 def generate_audio_from_text_and_save(text, voice, model, file_name):
     audio = generate_audio_from_text(text, voice, model)
-    play(audio)
     save(audio, file_name)
+    
 
 
 # Load the environment variables
