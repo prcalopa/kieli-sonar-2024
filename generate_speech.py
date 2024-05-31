@@ -5,6 +5,7 @@ from elevenlabs.client import ElevenLabs
 from elevenlabs import VoiceSettings, play, save
 import pandas as pd
 import glob
+from time import sleep
 
 
 def read_csv_file_and_generate_audio(file_path):
@@ -33,6 +34,7 @@ def read_csv_file_and_generate_audio(file_path):
                       "eleven_multilingual_v2", 
                       output_file_path
                   )
+                  sleep(1)
 
 def generate_audio_from_text(text, voice, model):
     audio = client.generate(
